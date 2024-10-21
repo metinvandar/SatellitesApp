@@ -11,7 +11,7 @@
   },
   {
     "id": 3,
-    "active": true,
+    "active": false,
     "name": "Starship-3"
   },
   {
@@ -21,7 +21,7 @@
   },
   {
     "id": 5,
-    "active": true,
+    "active": false,
     "name": "Echo"
   },
   {
@@ -31,7 +31,7 @@
   },
   {
     "id": 7,
-    "active": true,
+    "active": false,
     "name": "Landsat"
   },
   {

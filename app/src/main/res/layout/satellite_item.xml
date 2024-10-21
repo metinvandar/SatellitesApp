@@ -10,11 +10,16 @@
         android:layout_width="12dp"
         android:layout_height="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/satelliteNameTextView"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/horizontalGuideline"
         app:layout_constraintTop_toTopOf="parent"
         tools:background="@drawable/satellite_active_dot_background" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontalGuideline"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/satelliteNameTextView"
@@ -23,10 +28,10 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="8dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintBottom_toTopOf="@+id/satelliteStatusTextView"
         app:layout_constraintStart_toEndOf="@+id/satelliteStatusContainer"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
         tools:text="Dragon-1"
         tools:textColor="@color/color_satellite_active" />
 
