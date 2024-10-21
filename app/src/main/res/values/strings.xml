@@ -6,4 +6,5 @@
 
     <string name="error_default_message">Beklenmeyen bir hata oluştu. Lütfen tekrar deneyiniz.</string>
     <string name="error_satellites_not_found_message">Uydu bulunumadı.</string>
+    <string name="error_title">Hata</string>
 </resources>

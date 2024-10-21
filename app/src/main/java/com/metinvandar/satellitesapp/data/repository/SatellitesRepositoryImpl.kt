@@ -6,7 +6,6 @@ import com.metinvandar.satellitesapp.data.exception.SatellitesNotFoundException
 import com.metinvandar.satellitesapp.data.remote.SatelliteService
 import com.metinvandar.satellitesapp.data.remote.model.SatelliteData
 import com.metinvandar.satellitesapp.domain.repository.SatelliteRepository
-import emitErrorResult
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn

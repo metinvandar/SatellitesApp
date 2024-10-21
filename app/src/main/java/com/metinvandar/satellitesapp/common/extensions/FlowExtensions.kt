@@ -8,7 +8,7 @@ import java.io.IOException
 
 fun <T> Flow<Result<T>>.emitErrorResult(): Flow<Result<T>> = catch { throwable ->
     when(throwable) {
-        is IOException -> Result.Error(SatellitesNotFoundException())
-        else -> Result.Error(BaseException(throwable))
+        is IOException -> emit(Result.Error(SatellitesNotFoundException()))
+        else -> emit(Result.Error(BaseException(throwable)))
     }
 }

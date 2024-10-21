@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import com.metinvandar.satellitesapp.common.extensions.showError
 import com.metinvandar.satellitesapp.databinding.FragmentSatellitesBinding
 import com.metinvandar.satellitesapp.domain.model.Satellite
 import com.metinvandar.satellitesapp.domain.model.SatelliteStatus
@@ -57,7 +58,7 @@ class SatellitesFragment : Fragment() {
                         }
                         is SatelliteState.Failed -> {
                             binding.progress.visibility = View.GONE
-                            // show error message
+                            showError(state.message)
                         }
                     }
                 }
