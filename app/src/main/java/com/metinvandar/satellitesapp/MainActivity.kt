@@ -3,9 +3,9 @@ package com.metinvandar.satellitesapp
 import android.graphics.Rect
 import android.os.Bundle
 import android.view.MotionEvent
-import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import androidx.fragment.app.FragmentActivity
+import com.metinvandar.satellitesapp.common.extensions.hideKeyboard
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -24,8 +24,7 @@ class MainActivity : FragmentActivity() {
                 v.getGlobalVisibleRect(outRect)
                 if (!outRect.contains(event.rawX.toInt(), event.rawY.toInt())) {
                     v.clearFocus()
-                    val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
-                    imm.hideSoftInputFromWindow(v.getWindowToken(), 0)
+                    this.hideKeyboard(v)
                 }
             }
         }

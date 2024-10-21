@@ -3,4 +3,7 @@
     <string name="satellites_screen_search_hint">Search</string>
     <string name="satellites_active_status">Active</string>
     <string name="satellites_passive_status">Passive</string>
+
+    <string name="error_default_message">Beklenmeyen bir hata oluştu. Lütfen tekrar deneyiniz.</string>
+    <string name="error_satellites_not_found_message">Uydu bulunumadı.</string>
 </resources>

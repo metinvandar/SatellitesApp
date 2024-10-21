@@ -26,6 +26,6 @@ enum class SatelliteStatus(
     );
 
     companion object {
-        fun fromValue(value: Boolean) = entries.firstOrNull { it.value == value }
+        fun fromValue(value: Boolean) = entries.firstOrNull { it.value == value } ?: PASSIVE
     }
 }
