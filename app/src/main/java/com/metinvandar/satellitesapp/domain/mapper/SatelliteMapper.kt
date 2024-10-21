@@ -1,7 +1,7 @@
 package com.metinvandar.satellitesapp.domain.mapper
 
 import com.metinvandar.satellitesapp.common.extensions.safeGet
-import com.metinvandar.satellitesapp.data.remote.model.SatelliteData
+import com.metinvandar.satellitesapp.data.service.model.SatelliteData
 import com.metinvandar.satellitesapp.domain.model.Satellite
 import com.metinvandar.satellitesapp.domain.model.SatelliteStatus
 

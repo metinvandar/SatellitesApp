@@ -1,7 +1,6 @@
 package com.metinvandar.satellitesapp.domain.usecase
 
 import com.metinvandar.satellitesapp.common.Result
-import com.metinvandar.satellitesapp.data.exception.BaseException
 import com.metinvandar.satellitesapp.data.service.model.SatelliteData
 import com.metinvandar.satellitesapp.domain.mapper.Mapper
 import com.metinvandar.satellitesapp.domain.model.Satellite
@@ -10,13 +9,16 @@ import emitErrorResult
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
-class GetAllSatellitesUseCaseImpl(
+class SearchSatellitesUseCaseImpl(
     private val repository: SatelliteRepository,
     private val mapper: Mapper<List<SatelliteData>, List<Satellite>>
-) : GetAllSatellitesUseCase {
+) : SearchSatellitesUseCase {
 
-    override suspend fun invoke(): Flow<Result<List<Satellite>>> {
-        return repository.getSatellites()
+    override suspend fun invoke(query: String): Flow<Result<List<Satellite>>> {
+        val flow = if (query.isEmpty()) {
+            repository.getSatellites()
+        } else repository.searchSatellites(query)
+        return flow
             .map {
                 when (it) {
                     is Result.Success -> {
@@ -24,7 +26,7 @@ class GetAllSatellitesUseCaseImpl(
                     }
 
                     is Result.Error -> {
-                        Result.Error(BaseException())
+                        Result.Error(it.exception)
                     }
 
                     is Result.Loading -> it

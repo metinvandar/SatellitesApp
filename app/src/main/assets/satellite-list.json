@@ -13,5 +13,30 @@
     "id": 3,
     "active": true,
     "name": "Starship-3"
+  },
+  {
+    "id": 4,
+    "active": true,
+    "name": "Biosatellite"
+  },
+  {
+    "id": 5,
+    "active": true,
+    "name": "Echo"
+  },
+  {
+    "id": 6,
+    "active": true,
+    "name": "Glory"
+  },
+  {
+    "id": 7,
+    "active": true,
+    "name": "Landsat"
+  },
+  {
+    "id": 8,
+    "active": true,
+    "name": "TIROS"
   }
 ]

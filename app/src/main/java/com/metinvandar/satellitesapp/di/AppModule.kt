@@ -3,8 +3,8 @@ package com.metinvandar.satellitesapp.di
 import android.content.Context
 import com.metinvandar.satellitesapp.common.dispatchers.DispatcherProvider
 import com.metinvandar.satellitesapp.common.dispatchers.DispatcherProviderImpl
-import com.metinvandar.satellitesapp.data.remote.SatelliteService
-import com.metinvandar.satellitesapp.data.remote.SatelliteServiceImpl
+import com.metinvandar.satellitesapp.data.service.SatelliteService
+import com.metinvandar.satellitesapp.data.service.SatelliteServiceImpl
 import com.metinvandar.satellitesapp.data.repository.SatellitesRepositoryImpl
 import com.metinvandar.satellitesapp.domain.repository.SatelliteRepository
 import com.metinvandar.satellitesapp.domain.resources.ResourceProvider
