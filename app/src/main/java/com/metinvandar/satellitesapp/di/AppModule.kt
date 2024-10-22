@@ -1,8 +1,12 @@
 package com.metinvandar.satellitesapp.di
 
 import android.content.Context
+import androidx.room.Room
+import com.metinvandar.satellitesapp.R
 import com.metinvandar.satellitesapp.common.dispatchers.DispatcherProvider
 import com.metinvandar.satellitesapp.common.dispatchers.DispatcherProviderImpl
+import com.metinvandar.satellitesapp.data.db.dao.SatelliteDao
+import com.metinvandar.satellitesapp.data.db.database.AppDatabase
 import com.metinvandar.satellitesapp.data.service.SatelliteService
 import com.metinvandar.satellitesapp.data.service.SatelliteServiceImpl
 import com.metinvandar.satellitesapp.data.repository.SatellitesRepositoryImpl
@@ -28,7 +32,10 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun provideSatelliteRepository(satelliteService: SatelliteService, dispatcherProvider: DispatcherProvider): SatelliteRepository {
+    fun provideSatelliteRepository(
+        satelliteService: SatelliteService,
+        dispatcherProvider: DispatcherProvider
+    ): SatelliteRepository {
         return SatellitesRepositoryImpl(satelliteService, dispatcherProvider)
     }
 
@@ -42,5 +49,21 @@ object AppModule {
     @Singleton
     fun provideDispatcherProvider(): DispatcherProvider {
         return DispatcherProviderImpl()
+    }
+
+    @Provides
+    @Singleton
+    fun provideSatelliteDao(database: AppDatabase): SatelliteDao {
+        return database.satelliteDao()
+    }
+
+    @Provides
+    @Singleton
+    fun provideDatabase(@ApplicationContext context: Context): AppDatabase {
+        return Room.databaseBuilder(
+            context = context,
+            klass = AppDatabase::class.java,
+            name = context.getString(R.string.app_database)
+        ).build()
     }
 }
