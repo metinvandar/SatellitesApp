@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/satelliteNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25"
+        tools:text="Starship-1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/satelliteNameTextView"
+        tools:text="01.12.2012" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/heightMassTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/heightMassValueTextView"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateTextView"
+        tools:text="Height/Mass:" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/heightMassValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/heightMassTitleTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/heightMassTitleTextView"
+        app:layout_constraintTop_toTopOf="@+id/heightMassTitleTextView"
+        tools:text="110/1135000" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/costTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/costValueTextView"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heightMassTitleTextView"
+        tools:text="Cost:" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/costValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/costTitleTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/costTitleTextView"
+        app:layout_constraintTop_toTopOf="@+id/costTitleTextView"
+        tools:text="8.300.000" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lastPositionTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/lastPositionValueTextView"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/costTitleTextView"
+        tools:text="LastPosition:" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lastPositionValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/lastPositionTitleTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lastPositionTitleTextView"
+        app:layout_constraintTop_toTopOf="@+id/lastPositionTitleTextView"
+        tools:text="(0.864328541,0.646450811)" />
+</androidx.constraintlayout.widget.ConstraintLayout>
